@@ -1,0 +1,35 @@
+{
+    "schema_version": "v1",
+    "name_for_human": "银行余额查询工具",
+    "name_for_model": "BankBalanceCheck",
+    "description": "提供基于API的银行余额查询服务，支持通过账户名称和余额查询操作来获取相关信息。",
+    "auth": {
+        "type": "oauth2",
+        "token_url": "https://example.com/oauth/token",
+        "scopes": {
+            "read": "允许读取账户信息",
+            "write": "允许修改账户信息"
+        }
+    },
+    "api": {
+        "type": "openapi",
+        "url": "https://example.com/bank-balance-openapi.yaml"
+    },
+    "logo_url": "https://example.com/bank-balance-icon.png",
+    "contact_email": "support@examplebank.com",
+    "legal_info_url": "https://example.com/legal",
+    "parameters": [
+        {
+            "name": "account_name",
+            "type": "string",
+            "required": true,
+            "description": "需要查询的银行账户名称。"
+        },
+        {
+            "name": "check_balance",
+            "type": "boolean",
+            "required": true,
+            "description": "是否需要查询账户余额。"
+        }
+    ]
+}
